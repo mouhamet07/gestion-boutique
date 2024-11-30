@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Oswald:wght@200..700&family=Playwrite+PE:wght@100..400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Nanum Gothic", sans-serif;
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.logo {
+    height: 70px;
+    margin: 20px;
+}
+
+.asside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #072e33;
+    width: 15%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; 
+}
+
+.asside nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.asside nav a:hover {
+    background-color: #0c7075;
+    transform: scale(1.05);
+}
+
+.main {
+    margin-left: 15%;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav {
+    background-color: #0c7075;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.search i {
+    position: absolute; 
+    left: 10px; 
+    color: #333; 
+    pointer-events: none; 
+}
+#search {
+    padding: 8px 8px 8px 30px;
+    border-radius: 5px;
+    border: none;
+    width: 300px; 
+    margin-left: auto; 
+    margin-right: 20px; 
+}
+
+.subnav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.subnav i {
+    font-size: 150%; 
+    margin-right: 8px;
+}
+
+.login {
+    font-size: 90%; 
+    text-align: center;
+}
+
+.login a{
+    color: #ffffff;
+}
+
+.page {
+    padding: 20px;
+    background-color: #f5f5f5; 
+    color: #333;
+    flex-grow: 1;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .aside {
+        width: 100%; 
+        height: auto; 
+    }
+    .main {
+        width: 100%;
+    }
+}
+
+.debt-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: #333;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.debt-table th, .debt-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.debt-table th {
+    background-color: #0c7075;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.debt-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+.filtrerTout{
+    color: #072e33 !important;
+}
+
+.filtre{
+    display: flex;
+    background-color: #0c7075;
+    color: #fff;
+    gap: 10px;
+    width: 34%;
+    padding: 10px;
+}
