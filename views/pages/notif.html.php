@@ -4,37 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notification</title>
-    <link rel="shortcut icon" href="../img/logo-boutique.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="../css/notif.css">
+    <link rel="shortcut icon" href="./img/logo-boutique.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/notif.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <div class="asside">
-            <div><img class="logo" src="../img/logo-boutique.jpg" alt="Logo" /></div>
-            <nav>
-                <a href="listes.html">Liste Dettes</a>
-                <a href="ajout_dette.html">Enregistrer Dettes</a>
-                <a href="ajout_paiement.html">Enregistrer Paiement</a>
-                <a href="ajout_produit.html">Ajouter Produits</a>
-                <a href="Cumul_dette.html">Cumul Dettes</a>
-                <a href="notif.html">Notification</a>
-            </nav>
-        </div>
         <div class="main">
-            <div class="nav">
-                <div class="search">
-                    <input type="search" name="search" id="search" placeholder="Saisir votre recherche" />
-                    <i class="fas fa-search"></i>
-                </div>
-                <div class="subnav">
-                    <i class="fas fa-user"></i> 
-                    <div class="login">
-                        <p>User </p>
-                        <a href="../login.html">(Déconnexion)</a>
-                    </div>
-                </div>
-            </div>
+            <?php
+                include "../views/partial/header.html.php"
+            ?>
             <div class="page">
                 <h1>Notifications De Dettes</h1>
                 <table>
@@ -93,11 +72,14 @@
                     </tbody>
                 </table>
                 <div class="buttons">
-                    <button class="annuler" onclick="window.location.href='listes.html'">Annuler</button>
-                    <button class="envoyer" onclick="window.location.href='listes.html'">Envoyer</button>
+                    <button class="annuler" onclick="window.location.href='http://localhost/gestion-boutique/publics/?page=2'">Annuler</button>
+                    <button class="envoyer" onclick="window.location.href='http://localhost/gestion-boutique/publics/?page=2'">Envoyer</button>
                 </div>
             </div>
         </div>
     </div>
+    <?php
+        include "../views/partial/menu.html.php";
+    ?>
 </body>
 </html>
