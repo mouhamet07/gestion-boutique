@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Oswald:wght@200..700&display=swap');
 
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -8,43 +9,44 @@
 
 body {
     font-family: "Nanum Gothic", sans-serif;
-    color: #ffffff;
-    background-color: #e6e6e6;
+    color: #333;
+    background-color: #f9f9f9;
 }
 
+/* Layout */
 .container {
     display: flex;
-    flex-direction: column;
     height: 100vh;
 }
 
-.logo {
-    height: 70px;
-    margin: 20px;
-}
-
+/* Sidebar */
 .asside {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #072e33;
     width: 15%;
+    height: 100vh;
+    background-color: #072e33;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    padding: 20px;
+}
+
+.logo {
+    height: 70px;
+    margin-bottom: 30px;
 }
 
 .asside nav a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 16px;
     padding: 15px;
-    display: block;
     width: 100%;
     text-align: center;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .asside nav a:hover {
@@ -52,6 +54,7 @@ body {
     transform: scale(1.05);
 }
 
+/* Main Content */
 .main {
     margin-left: 15%;
     width: 85%;
@@ -59,17 +62,17 @@ body {
     flex-direction: column;
 }
 
+/* Navigation Bar */
 .nav {
     background-color: #0c7075;
     height: 15%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 0 20px;
 }
 
 .search {
-    position: relative;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -79,7 +82,6 @@ body {
     position: absolute;
     left: 10px;
     color: #333;
-    pointer-events: none;
 }
 
 #search {
@@ -87,8 +89,6 @@ body {
     border-radius: 5px;
     border: none;
     width: 300px;
-    margin-left: auto;
-    margin-right: 20px;
 }
 
 .subnav {
@@ -98,12 +98,12 @@ body {
 }
 
 .subnav i {
-    font-size: 150%;
+    font-size: 1.5em;
     margin-right: 8px;
 }
 
 .login {
-    font-size: 90%;
+    font-size: 0.9em;
     text-align: center;
 }
 
@@ -112,9 +112,10 @@ body {
     text-decoration: none;
 }
 
+/* Page Content */
 .page {
     padding: 20px;
-    background-color: #f5f5f5;
+    background-color: #ffffff;
     color: #333;
     flex-grow: 1;
     display: flex;
@@ -128,14 +129,14 @@ h1 {
     margin-bottom: 20px;
 }
 
+/* Product Card */
 .produit {
     width: 60%;
     padding: 30px;
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: #0c7075;
     color: #ffffff;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    margin-left: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 15px;
 }
 
@@ -147,14 +148,15 @@ label {
 }
 
 .produit input {
-    margin-bottom: 10px;
-    border-radius: 4px;
-    border: none;
-    padding: 8px;
     width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
     font-size: 14px;
 }
 
+/* Bottom Section */
 .bottom {
     display: flex;
     gap: 20px;
@@ -171,21 +173,21 @@ label {
 .addProduct button {
     flex: 1;
     margin: 0 10px;
-    padding: 8px 12px;
+    padding: 10px 15px;
     color: #ffffff;
     border: none;
-    cursor: pointer;
     font-size: 16px;
     border-radius: 4px;
-    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .bAdd {
-    background-color: #3498DB;
+    background-color: #3498db;
 }
 
 .bAdd:hover {
-    background-color: #2980B9;
+    background-color: #2980b9;
 }
 
 .bCancel {
@@ -196,6 +198,7 @@ label {
     background-color: #c82333;
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
     .asside {
         width: 100%;

@@ -20,7 +20,7 @@
             </div>
             <div class="button">
                 <button type="reset">Annuler</button>
-                <button type="submit" onclick="window.location.href='pages/listes.html'">Connexion</button>
+                <button type="submit" onclick="window.location.href='http://localhost/gestion-boutique/publics/?page=2'">Connexion</button>
             </div>            
         </form>
     </div>
