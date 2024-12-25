@@ -6,6 +6,7 @@
     <title>Ajout Produit</title>
     <link rel="shortcut icon" href="./img/logo-boutique.jpg" type="image/x-icon">
     <link rel="stylesheet" href="./css/addProduit.css">
+    <link rel="stylesheet" href="../public/css/addProduit.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -32,8 +33,8 @@
                         </div>
                     </div>
                     <div class="addProduct">
-                        <button type="submit" class="bCancel" onclick="window.location.href='http://localhost/gestion-boutique/publics/?page=2'">Annuler</button>
-                        <button type="submit" class="bAdd" onclick="window.location.href='http://localhost/gestion-boutique/publics/?page=2'">Ajouter</button>
+                        <button type="submit" class="bCancel" onclick="window.location.href='http://www.mouhamet-thiam.ism.edu.sn/index.php?page=2'">Annuler</button>
+                        <button type="submit" class="bAdd" onclick="window.location.href='http://www.mouhamet-thiam.ism.edu.sn/index.php?page=2'">Ajouter</button>
                     </div>
                 </form>
             </div>

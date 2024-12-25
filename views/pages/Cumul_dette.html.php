@@ -6,6 +6,7 @@
     <title>Cumul des Dettes</title>
     <link rel="shortcut icon" href="./img/logo-boutique.jpg" type="image/x-icon">
     <link rel="stylesheet" href="./css/cumDette.css">
+    <link rel="stylesheet" href="../public/css/cumDette.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>

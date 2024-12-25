@@ -6,6 +6,7 @@
     <title>Ajout Paiement</title>
     <link rel="shortcut icon" href="./img/logo-boutique.jpg" type="image/x-icon">
     <link rel="stylesheet" href="./css/addPaiement.css">
+    <link rel="stylesheet" href="../public/css/addPaiement.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -50,8 +51,8 @@
                                 <input type="number" id="montant" placeholder="Montant à payer">
                             </div>
                             <div class="buttons">
-                                <button class="btn annuler" onclick="window.location.href='http://localhost/gestion-boutique/publics/?page=2'">Annuler</button>
-                                <button class="btn enregistrer" onclick="window.location.href='http://localhost/gestion-boutique/publics/?page=2'">Enregistrer</button>
+                                <button class="btn annuler" onclick="window.location.href='http://www.mouhamet-thiam.ism.edu.sn/index.php?page=2'">Annuler</button>
+                                <button class="btn enregistrer" onclick="window.location.href='http://www.mouhamet-thiam.ism.edu.sn/index.php?page=2'">Enregistrer</button>
                             </div>
                         </div>
                     </div>

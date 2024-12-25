@@ -6,6 +6,7 @@
     <title>Liste des Dettes</title>
     <link rel="shortcut icon" href="./img/logo-boutique.jpg" type="image/x-icon">
     <link rel="stylesheet" href="./css/listes.css">
+    <link rel="stylesheet" href="../public/css/listes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -35,8 +36,8 @@
                             <td>Malick Diop</td>
                             <td>30.000 CFA</td>
                             <td>
-                                <button class=" action paiement" onclick="window.location.href='http://localhost/gestion-boutique/publics/?page=5'">Paiement</button>
-                                <button class="action cancel" onclick="window.location.href='http://localhost/gestion-boutique/publics/?page=5'">Annuler</button>
+                                <button class=" action paiement" onclick="window.location.href='http://www.mouhamet-thiam.ism.edu.sn/index.php?page=5'">Paiement</button>
+                                <button class="action cancel" onclick="window.location.href='http://www.mouhamet-thiam.ism.edu.sn/index.php?page=5'">Annuler</button>
                             </td>
                         </tr>
                         <tr>

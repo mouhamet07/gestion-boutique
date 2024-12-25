@@ -6,6 +6,7 @@
     <title>Ajout Dettes</title>
     <link rel="shortcut icon" href="./img/logo-boutique.jpg" type="image/x-icon">
     <link rel="stylesheet" href="./css/addDette.css">
+    <link rel="stylesheet" href="../public/css/addDette.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -30,8 +31,8 @@
                             <textarea name="" id=""placeholder="Entrez l'adresse'"></textarea>
                         </div>
                         <div class="buttons">
-                            <button class="annuler" onclick="window.location.href='http://localhost/gestion-boutique/publics/?page=2'">Annuler</button>
-                            <button class="enregistrer" onclick="window.location.href='http://localhost/gestion-boutique/publics/?page=2'">Enregistrer</button>
+                            <button class="annuler" onclick="window.location.href='http://www.mouhamet-thiam.ism.edu.sn/index.php?page=2'">Annuler</button>
+                            <button class="enregistrer" onclick="window.location.href='http://www.mouhamet-thiam.ism.edu.sn/index.php?page=2'">Enregistrer</button>
                         </div>
                     </div>
                     <div class="side right">
@@ -66,8 +67,8 @@
                             </div>
                         </div>
                         <div class="buttons">
-                            <button class="annuler" onclick="window.location.href='http://localhost/gestion-boutique/publics/?page=2'">Annuler</button>
-                            <button class="enregistrer" onclick="window.location.href='http://localhost/gestion-boutique/publics/?page=2'">Enregistrer</button>
+                            <button class="annuler" onclick="window.location.href='http://www.mouhamet-thiam.ism.edu.sn/index.php?page=2'">Annuler</button>
+                            <button class="enregistrer" onclick="window.location.href='http://www.mouhamet-thiam.ism.edu.sn/index.php?page=2'">Enregistrer</button>
                         </div>
                     </div>
                 </div>

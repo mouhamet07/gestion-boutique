@@ -6,6 +6,7 @@
     <title>Notification</title>
     <link rel="shortcut icon" href="./img/logo-boutique.jpg" type="image/x-icon">
     <link rel="stylesheet" href="./css/notif.css">
+    <link rel="stylesheet" href="../public/css/notif.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -72,8 +73,8 @@
                     </tbody>
                 </table>
                 <div class="buttons">
-                    <button class="annuler" onclick="window.location.href='http://localhost/gestion-boutique/publics/?page=2'">Annuler</button>
-                    <button class="envoyer" onclick="window.location.href='http://localhost/gestion-boutique/publics/?page=2'">Envoyer</button>
+                    <button class="annuler" onclick="window.location.href='http://www.mouhamet-thiam.ism.edu.sn/index.php?page=2'">Annuler</button>
+                    <button class="envoyer" onclick="window.location.href='http://www.mouhamet-thiam.ism.edu.sn/index.php?page=2'">Envoyer</button>
                 </div>
             </div>
         </div>
