@@ -33,8 +33,8 @@
                         </div>
                     </div>
                     <div class="addProduct">
-                        <button type="submit" class="bCancel" onclick="window.location.href='http://www.mouhamet-thiam.ism.edu.sn/index.php?page=2'">Annuler</button>
-                        <button type="submit" class="bAdd" onclick="window.location.href='http://www.mouhamet-thiam.ism.edu.sn/index.php?page=2'">Ajouter</button>
+                        <button type="submit" class="bCancel" onclick="window.location.href='<?php echo WEBROOT; ?>?controller=client&page=2'">Annuler</button>
+                        <button type="submit" class="bAdd" onclick="window.location.href='<?php echo WEBROOT; ?>?controller=client&page=2'">Ajouter</button>
                     </div>
                 </form>
             </div>

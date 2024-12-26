@@ -15,7 +15,7 @@
             <i class="fas fa-user"></i> 
             <div class="login">
                 <p>User</p>
-                <a href="http://www.mouhamet-thiam.ism.edu.sn/index.php?page=1">(Déconnexion)</a>
+                <a href="<?php echo WEBROOT; ?>?controller=security">(Déconnexion)</a>
             </div>
         </div>
     </div>

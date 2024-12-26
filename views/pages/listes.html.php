@@ -36,8 +36,8 @@
                             <td>Malick Diop</td>
                             <td>30.000 CFA</td>
                             <td>
-                                <button class=" action paiement" onclick="window.location.href='http://www.mouhamet-thiam.ism.edu.sn/index.php?page=5'">Paiement</button>
-                                <button class="action cancel" onclick="window.location.href='http://www.mouhamet-thiam.ism.edu.sn/index.php?page=5'">Annuler</button>
+                                <button class=" action paiement" onclick="window.location.href='<?php echo WEBROOT; ?>?controller=client&page=5'">Paiement</button>
+                                <button class="action cancel" onclick="window.location.href='<?php echo WEBROOT; ?>?controller=client&page=5'">Annuler</button>
                             </td>
                         </tr>
                         <tr>

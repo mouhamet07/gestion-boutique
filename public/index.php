@@ -7,23 +7,20 @@
 </head>
 <body>
     <?php
-        $page = isset($_GET['page']) ? $_GET['page'] : 1;
-        if ($page==1) {
-            include_once "../views/login.html.php";
-        }elseif ($page==2) {
-            include_once "../views/pages/listes.html.php";
-        }elseif ($page==3) {
-            include_once "../views/pages/ajout_dette.html.php";
-        }elseif ($page==4) {
-            include_once "../views/pages/addClients.html.php";
-        }elseif ($page==5) {
-            include_once "../views/pages/ajout_paiement.html.php";
-        }elseif ($page==6) {
-            include_once "../views/pages/ajout_produit.html.php";
-        }elseif ($page==7) {
-            include_once "../views/pages/Cumul_dette.html.php";
-        }else {
-            include_once "../views/pages/notif.html.php";
+    define ("WEBROOT", "http://www.mouhamet-thiam.ism.edu.sn/index.php");
+        $controller = isset($_GET['controller']) ? $_GET['controller'] : "security";
+        //var_dump($controller);
+        //die();
+        if ($controller=="security") {
+            include_once "../controllers/securite.controller.php";
+        }elseif ($controller=="client") {
+            include_once "../controllers/client.controller.php";
+        }elseif ($controller=="produit") {
+            include_once "../controllers/produit.controller.php";
+        }elseif ($controller=="error") {
+            include_once "../controllers/error.controller.php";
+        }else{
+            include_once "../controllers/securite.controller.php";
         }
     ?>
 </body>

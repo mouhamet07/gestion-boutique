@@ -51,8 +51,8 @@
                                 <input type="number" id="montant" placeholder="Montant à payer">
                             </div>
                             <div class="buttons">
-                                <button class="btn annuler" onclick="window.location.href='http://www.mouhamet-thiam.ism.edu.sn/index.php?page=2'">Annuler</button>
-                                <button class="btn enregistrer" onclick="window.location.href='http://www.mouhamet-thiam.ism.edu.sn/index.php?page=2'">Enregistrer</button>
+                                <button class="btn annuler" onclick="window.location.href='<?php echo WEBROOT; ?>?controller=client&page=2'">Annuler</button>
+                                <button class="btn enregistrer" onclick="window.location.href='<?php echo WEBROOT; ?>?controller=client&page=2'">Enregistrer</button>
                             </div>
                         </div>
                     </div>

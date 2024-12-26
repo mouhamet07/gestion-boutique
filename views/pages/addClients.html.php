@@ -31,8 +31,8 @@
                             <textarea name="" id=""placeholder="Entrez l'adresse'"></textarea>
                         </div>
                         <div class="buttons">
-                            <button class="annuler" onclick="window.location.href='http://www.mouhamet-thiam.ism.edu.sn/index.php?page=2'">Annuler</button>
-                            <button class="enregistrer" onclick="window.location.href='http://www.mouhamet-thiam.ism.edu.sn/index.php?page=2'">Enregistrer</button>
+                            <button class="annuler" onclick="window.location.href='<?php echo WEBROOT; ?>?controller=client&page=2'">Annuler</button>
+                            <button class="enregistrer" onclick="window.location.href='<?php echo WEBROOT; ?>?controller=client&page=2'">Enregistrer</button>
                         </div>
                     </div>
                     <div class="side right">
@@ -67,8 +67,8 @@
                             </div>
                         </div>
                         <div class="buttons">
-                            <button class="annuler" onclick="window.location.href='http://www.mouhamet-thiam.ism.edu.sn/index.php?page=2'">Annuler</button>
-                            <button class="enregistrer" onclick="window.location.href='http://www.mouhamet-thiam.ism.edu.sn/index.php?page=2'">Enregistrer</button>
+                            <button class="annuler" onclick="window.location.href='<?php echo WEBROOT; ?>?controller=client&page=2'">Annuler</button>
+                            <button class="enregistrer" onclick="window.location.href='<?php echo WEBROOT; ?>?controller=client&page=2'">Enregistrer</button>
                         </div>
                     </div>
                 </div>

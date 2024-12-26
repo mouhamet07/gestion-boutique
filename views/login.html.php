@@ -20,7 +20,7 @@
             </div>
             <div class="button">
                 <button type="reset">Annuler</button>
-                <button type="submit" onclick="window.location.href='http://www.mouhamet-thiam.ism.edu.sn/index.php?page=2'">Connexion</button>
+                <button type="submit" onclick="window.location.href='<?php echo WEBROOT; ?>?controller=client'">Connexion</button>
             </div>            
         </form>
     </div>

@@ -73,8 +73,8 @@
                     </tbody>
                 </table>
                 <div class="buttons">
-                    <button class="annuler" onclick="window.location.href='http://www.mouhamet-thiam.ism.edu.sn/index.php?page=2'">Annuler</button>
-                    <button class="envoyer" onclick="window.location.href='http://www.mouhamet-thiam.ism.edu.sn/index.php?page=2'">Envoyer</button>
+                    <button class="annuler" onclick="window.location.href='<?php echo WEBROOT; ?>?controller=client&page=2'">Annuler</button>
+                    <button class="envoyer" onclick="window.location.href='<?php echo WEBROOT; ?>?controller=client&page=2'">Envoyer</button>
                 </div>
             </div>
         </div>
