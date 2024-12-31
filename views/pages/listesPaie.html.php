@@ -35,7 +35,7 @@
                     </thead>
                     <tbody>
                     <?php if ($paie): ?>
-                        <?php foreach ($paie as$p): ?>
+                        <?php foreach ($paie as $p): ?>
                             <tr>
                                 <td><?php echo $p['ref']; ?></td>
                                 <td><?php echo $p['montant']; ?></td>
