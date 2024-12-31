@@ -36,7 +36,7 @@ body {
 .asside nav a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 16px;
     padding: 15px;
     display: block;
     width: 100%;
@@ -110,6 +110,7 @@ body {
 
 .page {
     padding: 20px;
+    padding-top: 30px;
     background-color: #f5f5f5; 
     color: #333;
     flex-grow: 1;
@@ -120,26 +121,22 @@ h1 {
     color: #333;
     margin-bottom: 20px;
 }
-
+h2{
+    margin: 20px 0px; 
+}
 .content {
     display: flex;
     gap: 20px;
+    flex: 1;
+    margin-top: 10px;
 }
 
-.infos {
-    flex: 1;
-    background-color: #072e33;
-    border-radius: 10px;
-    padding: 30px 20px 20px 20px;
-    color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.dette-paiement {
-    flex: 1;
+.infos-dette{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap:3px;
+    font-size: 18px;
+    padding-left: 5px;
 }
 
 .dette {
@@ -148,6 +145,7 @@ h1 {
     padding: 20px;
     color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50%;
 }
 
 .paiement {
@@ -156,6 +154,7 @@ h1 {
     padding: 20px;
     color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 45%;
 }
 
 label {
@@ -165,7 +164,7 @@ label {
     margin-bottom: 5px;
     padding-top: 5px;
 }
-.paiement input, .infos input{
+.paiement input{
     margin-bottom: 10px;
     border-radius: 4px;
     border: none;

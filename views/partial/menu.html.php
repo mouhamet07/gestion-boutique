@@ -12,7 +12,6 @@
             <nav>
                 <a href="<?php echo WEBROOT; ?>?controller=client">Liste Clients</a>
                 <a href="<?php echo WEBROOT; ?>?controller=client&page=4">Enregistrer Dettes</a>
-                <a href="<?php echo WEBROOT; ?>?controller=client&page=5">Enregistrer Paiement</a>
                 <a href="<?php echo WEBROOT; ?>?controller=produit">Ajouter Produits</a>
                 <a href="<?php echo WEBROOT; ?>?controller=client&page=7">Cumul Dettes</a>
                 <a href="<?php echo WEBROOT; ?>?controller=client&page=8">Notification</a>

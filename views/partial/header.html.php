@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    $username = $_SESSION['username'];
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +19,7 @@
         <div class="subnav">
             <i class="fas fa-user"></i> 
             <div class="login">
-                <p>User</p>
+                <p><?php echo $username ?></p>
                 <a href="<?php echo WEBROOT; ?>?controller=security">(Déconnexion)</a>
             </div>
         </div>

@@ -89,3 +89,14 @@ button[type="submit"]:hover {
 .forgot-password:hover {
     color: #ddd; 
 }
+
+.error {
+    color: #e74c3c; 
+    font-size: 14px;
+    font-weight: bold; 
+    margin-bottom: 15px; 
+    padding: 10px; 
+    border: 1px solid #c0392b;
+    border-radius: 5px; 
+    text-align: center; 
+}

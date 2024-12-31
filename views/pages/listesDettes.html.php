@@ -35,7 +35,7 @@
                     <input type="search" name="search" id="search" placeholder="Rechercher un client" />
                     <button type="submit" id="bSearch">Rechercher</button>
                 </div>
-                <div class="addNew">
+                <div class="addNew" style="margin-top:20px">
                     <button class="action paiement">
                         Ajouter Dette
                     </button>
