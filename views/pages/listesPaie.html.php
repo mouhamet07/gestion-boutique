@@ -22,7 +22,8 @@
                     <button type="submit" id="bSearch">Rechercher</button>
                 </div>
                 <div class="addNew">
-                    <button class="action paiement">
+                    <button class="action paiement" style="margin: 10px 0px 5px 20px"
+                    onclick="window.location.href='<?php echo WEBROOT; ?>?controller=client&page=10&id=<?php echo $id; ?>&ref=<?php echo $ref; ?>'">
                         Ajouter Paiement
                     </button>
                 <table class="debt-table">
