@@ -35,10 +35,14 @@
                     <input type="search" name="search" id="search" placeholder="Rechercher un client" />
                     <button type="submit" id="bSearch">Rechercher</button>
                 </div>
-                <table class="debt-table">
+                <div class="addNew">
+                    <button class="action paiement">
+                        Ajouter Dette
+                    </button>
+                <table class="debt-table" style="text-align:center">
                     <thead>
                         <tr>
-                            <th>Ref</th>
+                            <th >Ref</th>
                             <th>Montant</th>
                             <th>Montant Verse</th>
                             <th>Date</th>
@@ -54,7 +58,11 @@
                                 <td><?php echo $d['montantV']; ?></td>
                                 <td><?php echo $d['date']; ?></td>
                                 <td>
-                                    <button class=" action paiement" onclick="window.location.href='<?php echo WEBROOT; ?>?controller=client&page=5'">Paiement</button>
+                                    <button 
+                                        class="action paiement" 
+                                        onclick="window.location.href='<?php echo WEBROOT; ?>?controller=client&page=9&id=<?php echo $id; ?>&ref=<?php echo $d['ref']; ?>'">
+                                        Paiement
+                                    </button>
                                 </td>
                             </tr>
                         <?php endforeach?>

@@ -12,14 +12,14 @@ function selectClients() {
                     "ref" => "D11",
                     "montant" => 1000,
                     "montantV" => 1000,
-                    "date" => "2024-11-30"
-                ]
-            ],
-            "paie" => [
-                [
-                    "ref" => "P11",
-                    "montant" => 1000,
-                    "date" => "2024-11-30"
+                    "date" => "2024-11-30",
+                    "paie" => [
+                        [
+                            "ref" => "P11",
+                            "montant" => 1000,
+                            "date" => "2024-11-30"
+                        ]
+                    ]
                 ]
             ]
         ],
@@ -34,14 +34,19 @@ function selectClients() {
                     "ref" => "D21",
                     "montant" => 1000,
                     "montantV" => 1000,
-                    "date" => "2024-11-30"
-                ]
-            ],
-            "paie" => [
-                [
-                    "ref" => "P21",
-                    "montant" => 1000,
-                    "date" => "2024-11-30"
+                    "date" => "2024-11-30",
+                    "paie" => [
+                        [
+                            "ref" => "P21",
+                            "montant" => 500,
+                            "date" => "2024-11-30"
+                        ],
+                        [
+                            "ref" => "P22",
+                            "montant" => 500,
+                            "date" => "2024-11-31"
+                        ]
+                    ]
                 ]
             ]
         ],
@@ -56,14 +61,14 @@ function selectClients() {
                     "ref" => "D31",
                     "montant" => 1000,
                     "montantV" => 1000,
-                    "date" => "2024-11-30"
-                ]
-            ],
-            "paie" => [
-                [
-                    "ref" => "P31",
-                    "montant" => 1000,
-                    "date" => "2024-11-30"
+                    "date" => "2024-11-30",
+                    "paie" => [
+                        [
+                            "ref" => "P31",
+                            "montant" => 1000,
+                            "date" => "2024-11-30"
+                        ]
+                    ]
                 ]
             ]
         ],
@@ -78,20 +83,20 @@ function selectClients() {
                     "ref" => "D41",
                     "montant" => 1000,
                     "montantV" => 1000,
-                    "date" => "2024-11-30"
+                    "date" => "2024-11-30",
+                    "paie" => [
+                        [
+                            "ref" => "P41",
+                            "montant" => 1000,
+                            "date" => "2024-11-30"
+                        ]
+                    ]
                 ],
                 [
                     "ref" => "D42",
                     "montant" => 1000,
                     "montantV" => 0,
                     "date" => "2024-11-31"
-                ]
-            ],
-            "paie" => [
-                [
-                    "ref" => "P41",
-                    "montant" => 1000,
-                    "date" => "2024-11-30"
                 ]
             ]
         ]
@@ -106,6 +111,18 @@ function selectDettes(array $clients, int $id): array|null {
                 'nom' => $client['nom'] . ' ' . $client['prenom'], // Nom complet
                 'dette' => $client['dette'] // Liste des dettes
             ];
+        }
+    }
+    return null;
+}
+
+function selectPaie(array $dettes, string $ref): array|null {
+    foreach ($dettes as $dette) {
+        if ($dette['ref'] === $ref) {
+            return [
+                'paie' => $dette['paie'],
+                'ref_d' => $dette['ref']
+                ];
         }
     }
     return null;

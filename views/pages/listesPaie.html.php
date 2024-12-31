@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liste des Dettes</title>
     <link rel="shortcut icon" href="./img/logo-boutique.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="css/listes.css">
+    <link rel="stylesheet" href="css/listesPaie.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -15,41 +15,38 @@
                 include "../views/partial/header.html.php"
             ?>
             <div class="page">
-                <h1>Listes des Dettes</h1>
+                <h1>Listes des Paiements</h1><br>
+                <p><b><?php echo $nom; ?></b> >>> Dette N: <?php echo $ref; ?></b></p><br>
                 <div class="search">
                     <input type="search" name="search" id="search" placeholder="Rechercher un client" />
                     <button type="submit" id="bSearch">Rechercher</button>
                 </div>
                 <div class="addNew">
                     <button class="action paiement">
-                        Ajouter Client
+                        Ajouter Paiement
                     </button>
-                </div>
                 <table class="debt-table">
                     <thead>
                         <tr>
-                            <th>Nom</th>
-                            <th>Prenom</th>
-                            <th>Telephone</th>
-                            <th>Adresse</th>
-                            <th>Action</th>
+                            <th>Ref</th>
+                            <th>Montant Verse</th>
+                            <th>Date</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($clients as $client):?>
+                    <?php if ($paie): ?>
+                        <?php foreach ($paie as$p): ?>
                             <tr>
-                                <td><?php echo $client['nom']; ?></td>
-                                <td><?php echo $client['prenom']; ?></td>
-                                <td><?php echo $client['tel']; ?></td>
-                                <td><?php echo $client['ad']; ?></td>
-                                <td>
-                                    <button class=" action paiement" 
-                                        onclick="window.location.href='<?php echo WEBROOT; ?>?controller=client&page=3&id=<?php echo $client['id']; ?>'">
-                                        Dettes
-                                    </button>
-                                </td>
+                                <td><?php echo $p['ref']; ?></td>
+                                <td><?php echo $p['montant']; ?></td>
+                                <td><?php echo $p['date']; ?></td>
                             </tr>
                         <?php endforeach?>
+                    <?php else: ?>
+                        <td colspan='3'>
+                            <center>Aucun paiement.</center>
+                        </td>
+                    <?php endif ?>
                     </tbody>
                 </table>
             </div>

@@ -142,14 +142,15 @@ body {
 }
 
 .debt-table {
-    width: 100%;
+    width: 90%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin: 20px auto;
     color: #333;
     background-color: #fff;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
 }
 
 .debt-table th, .debt-table td {

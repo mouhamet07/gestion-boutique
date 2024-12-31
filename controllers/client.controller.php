@@ -35,6 +35,23 @@
         include_once "../views/pages/Cumul_dette.html.php";
     }elseif ($page==8) {
         include_once "../views/pages/notif.html.php";
+    }elseif($page==9){
+        if (isset($_GET['id']) && is_numeric($_GET['id']) && isset($_GET['ref'])) {
+            $id = $_GET['id'];
+            $ref = $_GET['ref'];
+            $c = selectDettes($clients, $id);
+            $dette = $c['dette'];
+            $nom = $c['nom'];
+            $result = selectPaie($dette, $ref);
+            $paie = $result['paie'];
+            if ($c && $result['ref_d']) {
+                include_once "../views/pages/listesPaie.html.php";
+            }else {
+                header('location:'.WEBROOT.'?controller=error');
+            }
+        }else {
+            header('location:'.WEBROOT.'?controller=error');
+        }
     }else{
         header('location:'.WEBROOT.'?controller=error');
     }
