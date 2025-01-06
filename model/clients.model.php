@@ -1,7 +1,7 @@
 <?php 
     date_default_timezone_set('Africa/Dakar');
     $today = date('Y-m-d');
-
+    
     $clients = [
         [
             "id" => 1,
