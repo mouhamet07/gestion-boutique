@@ -1,3 +1,4 @@
+<?php include_once "../model/clients.model.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,41 +18,33 @@
             ?>
             <div class="page">
                 <h1>Cumul des Dettes</h1>
-                <p><strong>Filtre</strong></p>
-                <div class="filtre">
-                    <div class="filtrerTout">Tout</div>
-                    <div class="auj">Aujourd'hui</div>
-                    <div class="sem">Semaines</div>
-                    <div class="mois">Mois</div>
-                </div>
                 <table class="debt-table">
                     <thead>
                         <tr>
-                            <th>Date</th>
-                            <th>Client</th>
-                            <th>Numero</th>
+                            <th>Nom</th>
+                            <th>Prenom</th>
                             <th>Montant</th>
+                            <th>Montant Verse</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>03/11/2024</td>
-                            <td>Malick Diop</td>
-                            <td>78 527 04 08</td>
-                            <td>30.000 CFA</td>
-                        </tr>
-                        <tr>
-                            <td>01/11/2024</td>
-                            <td>Aicha Ndiaye</td>
-                            <td>77 832 23 34</td>
-                            <td>120.000 CFA</td>
-                        </tr>
-                        <tr>
-                            <td>30/10/2024</td>
-                            <td>Almamy Thiam</td>
-                            <td>77 932 25 67</td>
-                            <td>320.000 CFA</td>
-                        </tr>
+                    <?php if (isset($clients) && count($clients) > 0):?>
+                            <?php foreach($clients as $c):?>
+                                <?php $mnt = getMnt($c['dette'])?>
+                                <?php if($mnt['dette'] > 0):?>
+                                    <tr>
+                                        <td><?php echo $c['nom']?></td>
+                                        <td><?php echo $c['prenom']?></td>
+                                        <td><?php echo $mnt['dette']?>CFA</td>
+                                        <td><?php echo $mnt['paie']?>CFA</td>
+                                    </tr>
+                                <?php endif ?>
+                            <?php endforeach;?>
+                        <?php else: ?>
+                            <td colspan='5'>
+                            <center>Aucune dette.</center>
+                            </td>
+                        <?php endif ?>
                     </tbody>
                 </table>
             </div>

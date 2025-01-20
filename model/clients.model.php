@@ -308,4 +308,17 @@
         return null;
     }
 
+
+    function getMnt($dettes){
+        $mntDette = 0;
+        $mntPaie = 0;
+        $mnt = [];
+        foreach ($dettes as $d) {
+            $mntDette += $d['montant'];
+            $mntPaie += $d['montantV'];
+        }
+        $mnt['dette'] = $mntDette;
+        $mnt['paie'] = $mntPaie;
+        return $mnt;
+    }
 ?>

@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Oswald:wght@200..700&family=Playwrite+PE:wght@100..400&display=swap');
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -11,7 +10,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #05161a; 
-    font-family: "Nanum Gothic", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .logForm {

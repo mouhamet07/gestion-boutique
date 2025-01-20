@@ -19,19 +19,19 @@
                 <p><b><?php echo $nom; ?></b></p><br>
                 <div class="search">
                 <form action="<?php echo WEBROOT ?>?controller=client&page=3&id=<?php echo $_GET['id']; ?>" 
-                method="get" style="display:flex; gap:10px; align-items:center">
-                <input type="hidden" name="controller" value="client">
-                <input type="hidden" name="page" value="3">
-                <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
-                        <div class = 'filtrer'>
-                            <select name="statut" style="padding:5px">
-                                <option value="tous" <?php if(!isset($_GET['statut']) || $_GET['statut'] == 'tous'){echo 'selected';} ?>>Tous</option>
-                                <option value="paye" <?php if(isset($_GET['statut']) && $_GET['statut'] == 'paye'){echo 'selected';} ?>>Payes</option>
-                                <option value="impaye" <?php if(isset($_GET['statut']) && $_GET['statut'] == 'impaye'){echo 'selected';} ?>>Impayes</option>
-                            </select>
-                        </div>
-                        <button class="submitB" type="submit" >Filtrer</button>
-                    </form>
+                    method="get" style="display:flex; gap:10px; align-items:center">
+                    <input type="hidden" name="controller" value="client">
+                    <input type="hidden" name="page" value="3">
+                    <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
+                    <div class = 'filtrer'>
+                        <select name="statut" style="padding:5px">
+                            <option value="tous" <?php if(!isset($_GET['statut']) || $_GET['statut'] == 'tous'){echo 'selected';} ?>>Tous</option>
+                            <option value="paye" <?php if(isset($_GET['statut']) && $_GET['statut'] == 'paye'){echo 'selected';} ?>>Payes</option>
+                            <option value="impaye" <?php if(isset($_GET['statut']) && $_GET['statut'] == 'impaye'){echo 'selected';} ?>>Impayes</option>
+                        </select>
+                    </div>
+                    <button class="submitB" type="submit" >Filtrer</button>
+                </form>
                     <input type="search" name="search" id="search" placeholder="Rechercher un client" />
                     <button type="submit" id="bSearch">Rechercher</button>
                 </div>
