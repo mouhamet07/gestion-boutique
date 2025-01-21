@@ -1,3 +1,4 @@
+<?php include_once "../model/clients.model.php"?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,56 +21,43 @@
                 <table>
                     <thead>
                         <tr>
-                            <th></th>
                             <th>Date</th>
                             <th>Client</th>
                             <th>Numero</th>
                             <th>Montant restant</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td><input type="checkbox" name="" id=""></td>
-                            <td>31/10/2024</td>
-                            <td>Malick Diop</td>
-                            <td>78 527 04 08</td>
-                            <td>10.000</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="" id=""></td>
-                            <td>01/11/2024</td>
-                            <td>Awa Ndiaye</td>
-                            <td>77 654 32 10</td>
-                            <td>15.000</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="" id=""></td>
-                            <td>02/11/2024</td>
-                            <td>Abdoulaye Faye</td>
-                            <td>76 345 21 09</td>
-                            <td>5.000</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="" id=""></td>
-                            <td>03/11/2024</td>
-                            <td>Fatou Diallo</td>
-                            <td>70 223 11 45</td>
-                            <td>12.500</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="" id=""></td>
-                            <td>04/11/2024</td>
-                            <td>Pape Ndiaye</td>
-                            <td>78 765 44 33</td>
-                            <td>20.000</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="" id=""></td>
-                            <td>05/11/2024</td>
-                            <td>Mariama Sow</td>
-                            <td>77 123 45 67</td>
-                            <td>8.000</td>
-                        </tr>
+                        <?php if (isset($clients) && count($clients) > 0): ?>
+                            <?php $hasClient = false; ?>
+                            <?php foreach($clients as $c): ?>
+                                <?php $dette = getLastDebt($c['dette']); ?>
+                                <?php if ($dette && $dette['montant'] - $dette['montantV'] > 0): ?>
+                                    <?php $hasClient = true; ?>
+                                    <tr>
+                                        <td><?php echo $c['nom']; ?></td>
+                                        <td><?php echo $c['prenom']; ?></td>
+                                        <td><?php echo $c['tel']; ?></td>
+                                        <td><?php echo ($dette['montant'] - $dette['montantV']); ?> CFA</td>
+                                        <td><input type="checkbox" name="action" id=""></td>
+                                    </tr>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                            <?php if (!$hasClient): ?>
+                                <tr>
+                                    <td colspan='4'>
+                                        <center>Aucun Client.</center>
+                                    </td>
+                                </tr>
+                            <?php endif; ?>
+                        <?php else: ?>
+                            <tr>
+                                <td colspan='4'>
+                                    <center>Aucun Client.</center>
+                                </td>
+                            </tr>
+                        <?php endif; ?>
                     </tbody>
                 </table>
                 <div class="buttons">

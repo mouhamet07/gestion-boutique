@@ -42,6 +42,16 @@
                         <h2>Enregistrement Du Paiement</h2>
                         <form method="POST" action="<?php echo WEBROOT ?>?controller=client&page=10&id=<?php echo $_GET['id']; ?>&ref=<?php echo $ref; ?>">
                             <div>
+                                <div>
+                                    <?php if(isset($error)):?>
+                                        <p class="error"><?php echo $error; ?></p>
+                                    <?php endif;?>
+                                </div>
+                                <div>
+                                    <?php if(isset($message)):?>
+                                        <p class="message"><?php echo $message; ?></p>
+                                    <?php endif;?>
+                                </div>
                                 <label for="montant">Montant</label>
                                 <input name="montant" type="number" required id="montant" placeholder="Montant à payer">
                                 <input type="hidden" name="controller" value="client">

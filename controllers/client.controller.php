@@ -59,6 +59,9 @@
             if ($montant > 0 && $reste >= $montant){
                 $paie = createPaie($d,$montant,$id);
                 $insertPaie = insererPaiement($clients,$ref,$id,$paie);
+                if ($insertPaie) {
+                    $message = 'Paiement enregistré avec succès.';
+                }
             }else {
                 $error = 'Montant incorrect ou superieur au montant du.';
             }

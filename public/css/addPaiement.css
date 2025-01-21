@@ -204,3 +204,22 @@ label {
 .enregistrer:hover {
     background-color: #3498DB;
 }
+
+.error {
+    color: #dc3545;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #c82333;
+    background-color: #fdd;
+    border-radius: 5px;
+}
+.message {
+    color: green;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid green;
+    background-color: #fdd;
+    border-radius: 5px;
+}

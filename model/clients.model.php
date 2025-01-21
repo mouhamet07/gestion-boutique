@@ -321,4 +321,14 @@
         $mnt['paie'] = $mntPaie;
         return $mnt;
     }
+    
+    function getLastDebt($dettes){
+        $last = null;
+        foreach ($dettes as $d) {
+            if ($last === null || $d['date'] > $last['date']) {
+                $last = $d;
+            }
+        }
+        return $last;
+    }
 ?>
